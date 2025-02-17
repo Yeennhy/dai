@@ -73,3 +73,36 @@ int main()
 
     return 0;
 }
+// #include "SFML/Graphics.hpp"
+
+// int main()
+// {
+//     sf::RenderWindow window(sf::VideoMode({800, 600}), "Window",
+//                             sf::Style::Titlebar | sf::Style::Close);
+//     sf::Font arial;
+//     arial.openFromFile("arial.ttf");
+//     sf::Text t(arial);
+//     t.setFillColor(sf::Color::White);
+//     t.setFont(arial);
+//     std::string s = "This is text that you type: ";
+//     t.setString(s);
+
+//     while (window.isOpen())
+//     {
+//         while (const std::optional event = window.pollEvent())
+//         {
+//             if (event->is<sf::Event::Closed>())
+//             {
+//                 window.close();
+//             }
+//             if (const auto *keyPressed = event->getIf<sf::Event::KeyPressed>())
+//             {
+//                 s.append(sf::Keyboard::getDescription(keyPressed->scancode));
+//             }
+//         }
+//         t.setString(s);
+//         window.clear(sf::Color::Black);
+//         window.draw(t);
+//         window.display();
+//     }
+// }
